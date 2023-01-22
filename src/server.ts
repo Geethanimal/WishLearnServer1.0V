@@ -21,10 +21,14 @@ connectToDatabase(ATLAS_URI)
 
        app.use("/employees", employeeRouter);
  
+       const PORT = process.env.PORT || 5200;
        // start the Express server
-       app.listen(5200, () => {
+       app.listen(PORT, () => {
            console.log(`Server running at http://localhost:5200...`);
+           console.log(`Server listening on port ${PORT}!`);
        });
  
    })
    .catch(error => console.error(error));
+
+export const app = express();
