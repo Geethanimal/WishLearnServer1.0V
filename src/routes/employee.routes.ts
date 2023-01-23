@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as mongodb from "mongodb";
-import { collections } from "./database";
+import { collections } from "../config/database";
  
 export const employeeRouter = express.Router();
 employeeRouter.use(express.json());
@@ -85,5 +85,3 @@ employeeRouter.get("/:id", async (req, res) => {
         res.status(400).send(error.message);
     }
  });
-
- 

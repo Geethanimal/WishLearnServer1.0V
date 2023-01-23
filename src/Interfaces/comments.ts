@@ -1,6 +1,7 @@
 import * as mongodb from "mongodb";
  
-export interface Employee {
-   postmsg: string;
+export interface Comment {
+   comment: string;
+   uid: string;
    _id?: mongodb.ObjectId;
 }
